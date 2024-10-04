@@ -1,0 +1,128 @@
+@keyframes animate {
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+}
+
+.background {
+    z-index: -1;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    background: #4e54c8;
+    overflow: hidden;
+}
+.background li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 19s linear infinite;
+}
+
+
+
+
+.background li:nth-child(0) {
+    left: 58%;
+    width: 179px;
+    height: 179px;
+    bottom: -179px;
+    animation-delay: 1s;
+}
+.background li:nth-child(1) {
+    left: 0%;
+    width: 158px;
+    height: 158px;
+    bottom: -158px;
+    animation-delay: 2s;
+}
+.background li:nth-child(2) {
+    left: 22%;
+    width: 155px;
+    height: 155px;
+    bottom: -155px;
+    animation-delay: 8s;
+}
+.background li:nth-child(3) {
+    left: 37%;
+    width: 194px;
+    height: 194px;
+    bottom: -194px;
+    animation-delay: 9s;
+}
+.background li:nth-child(4) {
+    left: 53%;
+    width: 190px;
+    height: 190px;
+    bottom: -190px;
+    animation-delay: 10s;
+}
+.background li:nth-child(5) {
+    left: 73%;
+    width: 136px;
+    height: 136px;
+    bottom: -136px;
+    animation-delay: 3s;
+}
+.background li:nth-child(6) {
+    left: 34%;
+    width: 149px;
+    height: 149px;
+    bottom: -149px;
+    animation-delay: 18s;
+}
+.background li:nth-child(7) {
+    left: 19%;
+    width: 166px;
+    height: 166px;
+    bottom: -166px;
+    animation-delay: 22s;
+}
+.background li:nth-child(8) {
+    left: 45%;
+    width: 116px;
+    height: 116px;
+    bottom: -116px;
+    animation-delay: 5s;
+}
+.background li:nth-child(9) {
+    left: 5%;
+    width: 103px;
+    height: 103px;
+    bottom: -103px;
+    animation-delay: 4s;
+}
+
+
+
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1;
+}
+
+footer {
+    margin-top: auto; /* Empuja el footer hacia abajo */
+}

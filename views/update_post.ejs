@@ -1,0 +1,39 @@
+<%- include("partials/header.ejs") %>
+
+<!-- Main Container -->
+<div class="container mt-5">
+    <!-- Page Title -->
+    <h1 class="text-center mb-4 text-white">Update Post</h1>
+
+    <!-- Form for Updating a Post -->
+    <form action="/update-post/<%= id %>" method="POST" class="mx-auto" style="max-width: 600px;">
+        <!-- Method Override for PATCH -->
+        <input type="hidden" name="_method" value="PATCH">
+
+        <!-- Title Input -->
+        <div class="mb-3">
+            <label for="title" class="form-label">Title:</label>
+            <input type="text" id="title" name="title" class="form-control" value="<%= posts[index].title %>" required>
+        </div>
+
+        <!-- Content Input -->
+        <div class="mb-3">
+            <label for="content" class="form-label">Content:</label>
+            <textarea id="content" name="content" class="form-control" rows="4" required><%= posts[index].content %></textarea>
+        </div>
+
+        <!-- Author Input -->
+        <div class="mb-3">
+            <label for="autor" class="form-label">Author:</label>
+            <input type="text" id="autor" name="autor" class="form-control" value="<%= posts[index].autor %>" required>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+        </div>
+    </form>
+</div>
+
+<%- include("partials/footer.ejs") %>
+
